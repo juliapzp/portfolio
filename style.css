@@ -4,58 +4,69 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins" , sans-serif;
+    font-family: "Poppins", sans-serif;
     text-decoration: none;
     list-style: none;
 }
 
-body{
-    overflow: hidden;
-}
-
-
-.background{
+.background {
     background: url(./img.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-   
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
 }
 
-header{
+.background::-webkit-scrollbar {
+    width: 6px;
+}
+
+.background::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+header {
     display: flex;
     justify-content: space-around;
     max-width: 100%;
     align-items: center;
     text-align: center;
     padding-top: 1rem;
-   
-    
 }
 
-.cabeçalho-link{
+.cabeçalho-link {
     display: flex;
     gap: 3rem;
     font-weight: 300;
-    cursor: pointer;  
+    cursor: pointer;
 }
 
-.cabeçalho-link a{
+.cabeçalho-link a {
     color: #fff;
     font-size: 12px;
 }
 
-.cabeçalho-link a:hover{
-    color:  #ffd460;
+.cabeçalho-link a:hover {
+    color: #ffd460;
     transition: 0.3s all;
 }
 
-
-button{
+button {
     color: #ffd460;
     background: transparent;
-    border:solid 1px #ffd460;
+    border: solid 1px #ffd460;
     padding: 5px;
     border-radius: 15px;
     font-size: 12px;
@@ -63,54 +74,70 @@ button{
     width: 150px;
 }
 
-button:hover{
+button:hover {
     background-color: #ffd56060;
     color: #fff;
     transition: 0.5s;
 }
 
-.container-text{
-    padding: 150px 0 0 130px;
+.container-text {
+    padding: 150px 0;
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: center;
+    text-align: center;
 }
 
-.text h3{
+.text h3 {
     color: #fff;
     font-size: 15px;
 }
 
-.text h1{
+.text h1 {
     color: #fff;
     margin-top: 10px;
 }
 
-.text span{
+.text span {
     color: #ffd460;
 }
 
-.text p{
+.text p {
     color: #fff;
-    font-weight: 500;
     margin-top: 10px;
-    font-size: 10px;
+    font-size: 13px;
 }
 
-.redes-social{
+.text {
+    align-items: center;
+}
+
+.redes-social {
     margin-top: 10px;
 }
 
-.redes-social a{
+.redes-social a {
     color: #ffd460;
     padding: 10px;
     margin-top: 5px;
 }
 
-.btn{
+.btn {
     margin-top: 15px;
 }
 
-@media screen and (max-width:600px){
+.sobre {
+    width: 100vw;
+    margin-bottom: 50px;
+    border-style: double;
+
+
+}
+
+
+@media screen and (max-width: 600px) {
     .cabeçalho-link {
         display: none;
     }
-    
 }

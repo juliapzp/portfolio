@@ -7,36 +7,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>layout</title>
+  <title>Portfólio</title>
 </head>
 
 <body>
   <div class="background">
     <header>
       <div class="cabeçalho-link">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Técnico</a></li>
-        <li><a href="#">Matérias</a></li>
-        <button>Meu Contato</button>
-      </div><!-- cabeçalho-link -->
+        <li><a href="#" onclick="showSlide(1)">Home</a></li>
+        <li><a href="#" onclick="showSlide(3)">Técnico</a></li>
+        <li><a href="#" onclick="showSlide(4)">Matérias</a></li>
+        <button onclick="showSlide(5)">Meu Contato</button>
+      </div>
     </header>
 
     <div class="container-text">
-      <div class="text">
-        <h3>Seja bem-vindo!</h3>
-        <h1>Port<span>Fólio</span></h1>
-        <p>Lorem Ipsum é simplesmente uma simulação de texto<br>da indústria tipográfica e de impressos</p>
-        <div class="redes-social">
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-github"></i></a>
-        </div><!-- redes-social -->
-        <button class="btn">Sobre Mim</button>
-      </div><!-- text -->
-    </div><!-- container-text -->
-  </div><!-- background -->
+      <div class="slide active">
+        <div class="text">
+          <p>Seja bem-vindo ao meu</p>
+          <h1>Port<span>Fólio</span></h1>
+          <button class="btn" onclick="showSlide(2)">Sobre Mim</button>
+        </div>
+      </div>
 
-  <script type="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+      <div class="sobre">
+        <div class="text">
+          <h1>Slide 2: Sobre Mim</h1>
+          <p>Júlia Pickcius Zanin Pereira</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="text">
+          <h1>Slide 3: Técnico</h1>
+          <!-- Conteúdo do slide 3 - Técnico -->
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="text">
+          <h1>Slide 4: Matérias</h1>
+          <!-- Conteúdo do slide 4 - Matérias -->
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="text">
+          <h1>Slide 5: Meu Contato</h1>
+          <!-- Conteúdo do slide 5 - Meu Contato -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
