@@ -12,3 +12,21 @@ function showSlide(slideNumber) {
     })
 
   })
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var sobre = document.getElementById('sobre');
+    var fundo = document.getElementById('fundo');
+  
+    function BackgroundHeight() {
+      if (sobre && fundo) {
+        var sobreHeight = sobre.offsetHeight;
+        fundo.style.height = sobreHeight + 'px';
+      }
+    }
+  
+    BackgroundHeight();
+  
+    window.addEventListener('resize', function() {
+      BackgroundHeight();
+    });
+  });
