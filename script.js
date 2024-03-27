@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', function() {
   function BackgroundHeight() {
     if (containerText && fundo) {
       var containerHeight = containerText.offsetHeight;
-      fundo.style.height = containerHeight + 'px';
+      fundo.style.minHeight = containerHeight + 'px';
     }
   }
 
